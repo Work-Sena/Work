@@ -18,6 +18,7 @@ namespace Work.Controllers
         // GET: HomePage
         public ActionResult Index()
         {
+            ViewBag.mail = (string)Session["Email"];
             return View(db.Tbl_Employee.ToList());
         }
 

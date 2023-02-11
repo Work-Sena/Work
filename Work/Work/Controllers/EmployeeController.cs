@@ -24,9 +24,12 @@ namespace Work.Controllers
         [HttpPost]
         public ActionResult Login(Tbl_Employee p)
         {
-            var employee=db.Tbl_Employee.FirstOrDefault(x=>x.Email== p.Email&&x.Password==p.Password);//BUNUN YERİNE Equals kullan
+            var employee = db.Tbl_Employee.FirstOrDefault(x => x.Email.Equals(p.Email) && x.Password.Equals(p.Password));
+            /* var employee=db.Tbl_Employee.FirstOrDefault(x=>x.Email== p.Email&&x.Password==p.Password);*///BUNUN YERİNE Equals kullan
             if (employee!=null) 
             {
+                
+                Session["Email"] = p.Email;
                 FormsAuthentication.SetAuthCookie(employee.Email,false);
                 return RedirectToAction("Index", "HomePage");
             }
