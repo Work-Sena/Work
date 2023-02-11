@@ -29,7 +29,7 @@ namespace Work.Controllers
             if (employee!=null) 
             {
                 
-                Session["Email"] = p.Email;
+                Session["Guid"] = employee.Guid;
                 FormsAuthentication.SetAuthCookie(employee.Email,false);
                 return RedirectToAction("Index", "HomePage");
             }

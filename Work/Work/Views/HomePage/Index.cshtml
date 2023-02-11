@@ -39,7 +39,7 @@
     </tr>
 
     @*@foreach (var item in Model)*@
-    @foreach (var item in Model.Where(x => x.Email == @ViewBag.mail))
+    @foreach (var item in Model.Where(x => Convert.ToString( x.Guid )== @ViewBag.guid))
     {
         <tr>
             <td>

@@ -11,13 +11,17 @@ namespace Work.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Tbl_Employee
     {
         public int Id { get; set; }
+        public System.Guid Guid { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        [DisplayName("Mail Adresi")]
         public string Email { get; set; }
+        [DisplayName("Þifre")]
         public string Password { get; set; }
         public string Unvan { get; set; }
         public string Role { get; set; }

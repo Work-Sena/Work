@@ -16,6 +16,7 @@
       <EntityTypeMapping TypeName="WorkDbModel.Tbl_Employee">
         <MappingFragment StoreEntitySet="Tbl_Employee">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
           <ScalarProperty Name="Email" ColumnName="Email" />

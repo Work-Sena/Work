@@ -15,6 +15,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Surname" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />

@@ -18,7 +18,7 @@ namespace Work.Controllers
         // GET: HomePage
         public ActionResult Index()
         {
-            ViewBag.mail = (string)Session["Email"];
+            ViewBag.guid = Convert.ToString( Session["Guid"]);
             return View(db.Tbl_Employee.ToList());
         }
 
@@ -49,10 +49,11 @@ namespace Work.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Surname,Email,Password,Unvan,Role")] Tbl_Employee tbl_Employee)
+        public ActionResult Create([Bind(Include = "Id,Guid,Name,Surname,Email,Password,Unvan,Role")] Tbl_Employee tbl_Employee)
         {
             if (ModelState.IsValid)
             {
+                tbl_Employee.Guid = Guid.NewGuid();
                 db.Tbl_Employee.Add(tbl_Employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");

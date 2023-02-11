@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="~/Latform - Login and Register Form Templates/dist/css/latform-style-8.min.css" type="text/css">
 </head>
 <body>
-    @ViewBag.Message
+
     @using(Html.BeginForm("Login", "Employee", FormMethod.Post))
     {
     <div class="form-wrapper" style="background: url(../../dist/images/cover1.jpg)">
@@ -35,19 +35,20 @@
                 <form>
                     <div class="form-group">
                         <div class="form-icon-wrapper">
-                            @Html.LabelFor(x => x.Email)
+                            @Html.LabelFor(x => x.Email, new { style = "font-size: 16px" })
                             @Html.TextBoxFor(x => x.Email, new {@class="form-control",placeholder="Mail Adresi"})
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-icon-wrapper">
-                            @Html.LabelFor(x => x.Password)
+                            @Html.LabelFor(x => x.Password, new { style = "font-size: 16px" })
                             @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Parola" })
                         </div>
                     </div>
                     <div class="form-group d-flex justify-content-between align-items-center">
+                        <b>@ViewBag.Message</b>
                         <button type="submit" class="btn btn-white">Giriş Yap</button>
-                       
+
                     </div>
                 </form>
                

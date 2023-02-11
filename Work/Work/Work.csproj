@@ -280,8 +280,8 @@
     <Content Include="Latform - Login and Register Form Templates\src\js\latform.js" />
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Entity\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -290,13 +290,6 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Entity\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Entity\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <Content Include="Latform - Login and Register Form Templates\dist\icons\material-design-icons\fonts\materialdesignicons-webfont.eot" />
     <Content Include="Latform - Login and Register Form Templates\dist\icons\material-design-icons\fonts\materialdesignicons-webfont.ttf" />
     <Content Include="Latform - Login and Register Form Templates\dist\icons\material-design-icons\fonts\materialdesignicons-webfont.woff" />
@@ -317,6 +310,13 @@
     <Content Include="Latform - Login and Register Form Templates\src\scss\latform-style-7.scss" />
     <Content Include="Latform - Login and Register Form Templates\src\scss\latform-style-8.scss" />
     <Content Include="Latform - Login and Register Form Templates\src\scss\latform-style-9.scss" />
+    <EntityDeploy Include="Models\Entity\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Entity\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
